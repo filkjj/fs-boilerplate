@@ -1,3 +1,15 @@
+const {db} = require('./db')
+const { SomeModel, SomeOtherModel } = require('./models/Example')
+
+SomeModel.hasMany(SomeOtherModel)
+SomeOtherModel.belongsTo(SomeModel)
+
+module.exports = {
+    db,
+    SomeModel, 
+    SomeOtherModel
+}
+
 //import your db
 //import your models
 
